@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Image from "next/image";
-import Typography from "../../shared/Typography";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Image from 'next/image';
+import Typography from '../../shared/Typography';
 interface FeatureCardProps {
   image: string;
   text: string;
@@ -10,21 +10,21 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ image, text, heading }) => {
   return (
-    <div className="flex flex-col gap-[20px] items-center md:items-start">
-      <div className="relative w-full  h-[300px] custom-md:w-[330px] xl:w-full  custom-md:h-[250px] custom-md:max-w-[350px] xl:max-w-[420px]">
-        {" "}
+    <div className='flex flex-col gap-[20px] items-center md:items-start'>
+      <div className='relative w-full  h-[300px]  xl:w-full  custom-md:h-[280px] custom-md:max-w-[450px] '>
+        {' '}
         <Image
           src={image}
           alt={heading}
           fill
           priority
-          className="w-full h-full object-cover rounded-[5px]"
+          className='w-full h-full object-cover rounded-[5px]'
         />
       </div>
-      <Typography.H3 styles="justify-self-start self-start font-bold">
+      <Typography.H3 styles='justify-self-start self-start font-bold'>
         {heading}
       </Typography.H3>
-      <Typography.PSmall styles="text-gray">{text}</Typography.PSmall>
+      <Typography.PSmall styles='text-gray'>{text}</Typography.PSmall>
     </div>
   );
 };
